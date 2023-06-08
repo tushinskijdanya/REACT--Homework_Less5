@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(//fullhdoboi.ru/wp-content/uploads/_ph/4/596945505.jpg);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.title h1 {
+  color: rgb(218, 53, 2);
+  font-size: 50px;
+}
+
+.title p {
+  color: rgb(191, 74, 35);
+  font-size: 20px;
+  width: 400px;
+  font-weight: bold;
+}
+
+.form-output_container {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.form,
+.output {
+  width: 50%;
+  height: 430px;
+  padding: 30px;
+  background: rgba(46, 56, 147, 0.83);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.output {
+  background: rgba(225, 114, 11, 0.769);
+}
+
+.form input,
+.output-line {
+  width: 90%;
+  height: 50px;
+  padding: 0 7px 0 7px;
+  font-size: 20px;
+  background: #ffffffce;
+  border: none;
+}
+
+.output-line {
+  display: flex;
+  align-items: center;
+}
+
+.form input::placeholder {
+  font-size: 15px;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form-button {
+  width: 70px;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.send {
+  background: hsl(178, 94%, 19%);
+}
+
+.clear {
+  background: rgb(255, 21, 21);
+  margin-right: 106px;
+}
+
+.encoding {
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.last {
+  width: 150px;
+  background: rgb(234, 234, 22);
+  color: rgb(152, 54, 21);
+}
+
+
