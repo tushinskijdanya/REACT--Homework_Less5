@@ -50,7 +50,9 @@ function Form () {
         });
     }
 
-    function sendForm () {
+    function sendForm (e) {
+        e.preventDefault();
+
         setReadyForm(prev => {
             let temp = {...prev};
             temp.name = form.name;
@@ -64,7 +66,8 @@ function Form () {
         })
     }
 
-    function clearAll () {
+    function clearAll (e) {
+        e.preventDefault();
         localStorage.removeItem('form');
 
         setForm(prev => {
@@ -90,7 +93,8 @@ function Form () {
             })
     }
 
-    function showSavedForm () {
+    function showSavedForm (e) {
+        e.preventDefault();
         if (localForm !== null) {
             setForm(prev => {
                 let temp = {...prev};
@@ -118,7 +122,7 @@ function Form () {
 
     return (
         <section className="form-output_container">
-            <div className="form">
+            <form className="form">
                 <input type="text" name="name" placeholder="*Name" value={form.name} onChange={e => {inputTracking(e)}}/>
                 <input type="text" name="lastname" placeholder="*Lastname" value={form.lastname} onChange={e => {inputTracking(e)}}/>
                 <input type="text" name="height" placeholder="Height" value={form.height} onChange={e => {inputTracking(e)}}/>
@@ -130,7 +134,7 @@ function Form () {
                     <button onClick={clearAll} className="form-button clear">Clear</button>
                     <button onClick={showSavedForm} className="form-button last">From the last send</button>
                 </div>
-            </div>
+            </form>
             <div className="output">
                 <div className="output-line">
                     <span className="encoding">Name: </span>
